@@ -12,6 +12,7 @@ export class CourseContainerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
