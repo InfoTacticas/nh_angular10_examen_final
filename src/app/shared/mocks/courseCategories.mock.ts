@@ -5,15 +5,15 @@ export const courseCategoriesMock: CourseCategory [] =
 
 [
     {
-        "id": 1,
-        "name": "Diseño"
+        id: 1,
+        name: 'Diseño'
     },
     {
-        "id": 2,
-        "name": "Desarrollo"
+        id: 2,
+        name: 'Desarrollo'
     },
     {
-        "id": 3,
-        "name": "Tecnología de Información"
+        id: 3,
+        name: 'Tecnología de Información'
     }
-]
+];

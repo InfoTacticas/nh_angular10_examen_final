@@ -2,6 +2,6 @@ export interface Instructor {
     id: number;
     name: string;
     lastName: string;
-    image: string;   
+    image: string;
     educationTitle: string;
 }
