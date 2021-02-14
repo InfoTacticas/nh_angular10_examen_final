@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { SuscribeService } from '../../services/suscribe.service';
 
-
 @Component({
   selector: 'app-suscribe-form',
   templateUrl: './suscribe-form.component.html',
@@ -38,6 +37,5 @@ export class SuscribeFormComponent implements OnInit {
     //  this.suscribeService.save(suscribeForm.get('email').value);
     // }
   }
-
 
 }

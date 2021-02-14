@@ -1,1 +1,12 @@
-<p>instructor-short works!</p>
+<img [src] = "instructor.image" width="100%" height="auto">
+<div class="datos-instructor">
+    <p class="instructor-name">    
+        {{ instructor.name }} {{ instructor.lastName }}
+    </p>
+    <p class="instructor-educationTitle">
+        {{ instructor.educationTitle }}
+    </p>
+    <p class="instructor-name">
+        {{ totalCourses }} cursos
+    </p>
+</div>

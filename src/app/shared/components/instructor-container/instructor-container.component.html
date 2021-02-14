@@ -1,1 +1,5 @@
-<p>instructor-container works!</p>
+<div class="row">
+    <div class="col-md-{{classShowInstructor}}" *ngFor="let instructor of instructors">
+        <app-instructor-short [instructor] = "instructor"></app-instructor-short>
+    </div>
+</div>

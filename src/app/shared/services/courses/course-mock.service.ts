@@ -25,4 +25,10 @@ export class CourseMockService {
       const course: Course = coursesMock.find( coursex => coursex.id === id );
       return course;
     }
+
+    getTotalCourseByInstructor(id: number): number {
+
+      const courses: Course[] = coursesMock.filter( coursex => coursex.instructor === id );
+      return courses.length;
+    }
 }

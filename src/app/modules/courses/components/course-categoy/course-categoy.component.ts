@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CourseCategory } from 'src/app/shared/interfaces/courseCategory';
+
+import { CourseCategoryMockService } from 'src/app/shared/services/courseCategories/course-category-mock.service';
 
 @Component({
   selector: 'app-course-categoy',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseCategoyComponent implements OnInit {
 
-  constructor() { }
+  courseCategories: CourseCategory[];
+  constructor(
+    private courseCategoryMockService: CourseCategoryMockService
+
+  ) {
+
+  }
 
   ngOnInit(): void {
+    this.fethCourse();
+  }
+
+  fethCourse(): void{
+    this.courseCategories = this.courseCategoryMockService.getCourseCategories();
   }
 
 }
+
+

@@ -1,1 +1,5 @@
-<p>course-container works!</p>
+<div class="row">
+    <div class="col-md-{{classShowBook}}" *ngFor="let course of courses">
+        <app-course-short [course] = "course" [instructorName]="getInstructorName(course.id)"></app-course-short>
+    </div>
+</div>

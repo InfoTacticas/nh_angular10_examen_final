@@ -1,1 +1,22 @@
-<p>course-detail works!</p>
+<div class="row" *ngIf="course">
+    <div class="col-md-5">
+        <img [src]="course.image" width="100%" height="auto">
+    </div>
+    <div class="col-md-5" >
+        <h2> {{ course.name }}</h2>
+        <div class="row">            
+            <div class="col-md-4">
+                <p> Nro Estudiantes:  {{ course.students }}</p>
+            </div>
+            <div class="col-md-4">
+                <p> Lenguaje {{ course.language }}</p>
+            </div>
+            <div class="col-md-4">
+                <p> Precio {{ course.price }}</p>
+            </div>
+            <p>
+                {{ course.summary }}
+            </p>
+        </div>
+    </div>
+</div>

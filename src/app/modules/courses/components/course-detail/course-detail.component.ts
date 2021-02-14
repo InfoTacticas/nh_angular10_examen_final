@@ -1,4 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Course } from 'src/app/shared/interfaces/course';
+
+import { CourseMockService } from 'src/app/shared/services/courses/course-mock.service';
 
 @Component({
   selector: 'app-course-detail',
@@ -8,9 +11,20 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CourseDetailComponent implements OnInit {
 
   @Input() courseId: number;
-  constructor() { }
+  course: Course;
+  constructor(
+    private courseMockService: CourseMockService
+
+  ) {
+
+  }
 
   ngOnInit(): void {
+    this.fethBook();
+  }
+
+  fethBook(): void{
+    this.course = this.courseMockService.getCourse(this.courseId);
   }
 
 }

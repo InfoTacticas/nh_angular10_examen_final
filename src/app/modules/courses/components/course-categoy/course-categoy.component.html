@@ -1,1 +1,7 @@
-<p>course-categoy works!</p>
+<div class="bloque-category-course">
+    <span class="item-category-course active-category">TODOS</span>   
+    <span class="item-category-course" *ngFor="let category of courseCategories">
+        {{ category.name }}
+    </span>        
+</div>
+

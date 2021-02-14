@@ -1,1 +1,17 @@
-<p>course-short works!</p>
+<img [src] = "course.image" width="100%" height="auto">
+<div class="datos-course">
+    <p class="course-title">    
+        <a [routerLink] = "['/courses', course.id]"> {{ course.name }} </a>
+    
+    
+    <p *ngIf="course.language == 'en'; else elseBlock" class="course-language"> INGLÉS</p>
+    <ng-template #elseBlock>ESPAÑOL.</ng-template>       
+    
+    <p>
+        Instructor: 
+        <span class="course-instructor">{{ instructorName }}</span>
+    </p>
+    <p class="course-price">
+        Precio: {{ course.price }}
+    </p>
+</div>

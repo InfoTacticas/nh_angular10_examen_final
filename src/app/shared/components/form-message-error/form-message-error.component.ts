@@ -7,6 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./form-message-error.component.scss']
 })
 export class FormMessageErrorComponent implements OnInit {
+
   @Input() control: FormControl;
   constructor() { }
 

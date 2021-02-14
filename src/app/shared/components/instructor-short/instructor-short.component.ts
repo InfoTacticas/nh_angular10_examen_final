@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Instructor } from '../../interfaces/instructor';
+import { CourseMockService } from '../../services/courses/course-mock.service';
 
 @Component({
   selector: 'app-instructor-short',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InstructorShortComponent implements OnInit {
 
-  constructor() { }
+  @Input() instructor: Instructor;
+  totalCourses: number;
+  constructor(
+    private courseService: CourseMockService
+  ) { }
 
   ngOnInit(): void {
+    this.totalCourses = this.courseService.getTotalCourseByInstructor(this.instructor.id);
   }
 
 }
+
