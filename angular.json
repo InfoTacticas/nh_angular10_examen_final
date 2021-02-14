@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "nh-angular10-examen2021"
+    }
+  },
+  "defaultProject": "nh-angular10-examen2021",
+  "cli": {
+    "analytics": false
+  }
 }
