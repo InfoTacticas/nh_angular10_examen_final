@@ -1,1 +1,20 @@
-<p>suscribe-form works!</p>
+<h4 class="footer-widget-title mb-25">Newsletters</h4>
+<p class="mb-25">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accu
+    santium doloremque laudantium totam rem aperiam </p>
+<!-- 
+<form class="slider-search-form">
+    <input type="text" placeholder="Enter Your Email">
+    <button type="submit"><i class="far fa-long-arrow-alt-right"></i></button>
+</form>
+
+<form [formGroup]="suscribeForm" (ngSubmit)="toSuscribe(suscribeForm)">
+    <input type="email" placeholder="Ingrese email" formControlName="email">
+    <button>suscribirse</button><br />
+ <app-form-message-error [control]="email"></app-form-message-error>
+</form>
+-->
+<form [formGroup]="suscribeForm" (ngSubmit)="toSuscribe(suscribeForm)">
+    <input type="email" placeholder="Ingrese email" formControlName="email">
+    <button>suscribirse</button><br />
+    <app-form-message-error [control]="email"></app-form-message-error>
+</form>
