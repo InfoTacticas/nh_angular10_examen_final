@@ -1,1 +1,30 @@
-<p>leave-message works!</p>
+<form [formGroup]="enviarMensajeForm" (ngSubmit)="toEnviarMensaje(enviarMensajeForm)" class="enviarMensajeForm">
+    
+    <p classs="row">
+        <label class="col-md-2">Nombres</label>
+        <input type="text" class="col-md-3" formControlName="name" >
+        <app-form-message-error [control]="name" style="display: blocK;"></app-form-message-error>
+      </p>
+    
+      <p>
+        <label class="col-md-2">Email</label>
+        <input type="email" class="col-md-3" formControlName="email">
+        <app-form-message-error [control]="email" style="display: blocK;"></app-form-message-error>
+      </p>
+    
+      <p>
+        <label class="col-md-2">Teléfono</label>
+        <input type="text" class="col-md-3" formControlName="telefono">
+        <app-form-message-error [control]="telefono" style="display: blocK;"></app-form-message-error>
+      </p>
+    
+      <p>
+        <label class="col-md-2"> Mensaje</label>
+        <textarea  formControlName="mensaje" class="col-md-3"></textarea>
+        <app-form-message-error [control]="mensaje" style="display: blocK;"></app-form-message-error>
+      </p>
+    
+    
+    <button class="col-md-4">Enviar</button>
+    
+</form>

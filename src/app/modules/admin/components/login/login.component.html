@@ -1,1 +1,18 @@
-<p>login works!</p>
+<form [formGroup]="loginForm">
+    
+    <p>
+      <label class="col-md-2">Usuario</label>
+      <input type="text" formControlName="username">
+      <app-form-message-error [control]="f.username"></app-form-message-error>
+    </p>
+  
+    <p>
+      <label class="col-md-2">Password</label>
+      <input type="password" formControlName="password">
+      <app-form-message-error [control]="f.password"></app-form-message-error>
+    </p>
+  
+    
+    <button  class="col-md-3">Login</button>
+</form>
+  

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LeaveMessageComponent } from '../../components/leave-message/leave-message.component';
 
 @Component({
   selector: 'app-contact-us-page',
